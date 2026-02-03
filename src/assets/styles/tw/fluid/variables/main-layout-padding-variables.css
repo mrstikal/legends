@@ -1,0 +1,36 @@
+/*
+  Calculate fluid space y size using the formula https://www.marcbacon.com/tools/clamp-calculator/
+  TW uses --spacing variable as base value for spacing and sizing utilities like padding, margin, spacing etc.
+  See https://tailwindcss.com/docs/theme#default-theme-variable-reference
+  Note these space utilities works only for --spacing: 0.25rem,
+  if you change this variable you need to recalculate mid value for formula.
+
+  For more info about space utility see https://tailwindcss.com/docs/margin#adding-space-between-children
+*/
+
+@theme {
+    /**
+      Please use following structure:
+        --padding-{n}-min: {min} - min value, helper variable
+        --padding-{n}-max: {max} - max value, helper variable
+        --padding-{n}-formula: {formula} - formula to calculate mid value, helper
+        --padding-{n}-value: {clamp} - final value, use this variable in your layouts
+
+        To be sure, add a comment before the formula for which viewport range it is created.
+
+        Remember that the minimum value, maximum value and range of viewports should be set
+        according to the graphical result and should not just be mechanically copied.
+    */
+
+    --padding-main-left-min: 3rem;
+    --padding-main-left-max: 12rem;
+    /* viewports range: 480 - 1920 px */
+    --padding-main-left-formula: 0rem + 10vw;
+    --padding-main-left-value: clamp(var(--padding-main-left-min), var(--padding-main-left-formula), var(--padding-main-left-max));
+
+    --padding-main-right-min: 2rem;
+    --padding-main-right-max: 4rem;
+    /* viewports range: 480 - 1920 px */
+    --padding-main-right-formula: 1.333rem + 2.222vw;
+    --padding-main-right-value: clamp(var(--padding-main-right-min), var(--padding-main-right-formula), var(--padding-main-right-max));
+}

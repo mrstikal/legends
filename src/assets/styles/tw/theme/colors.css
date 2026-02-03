@@ -1,0 +1,25 @@
+@theme {
+    /* colors */
+    /**
+    | The color palette defined bellow is also assigned to the "colors" key of
+    | your Tailwind config. This makes it easy to access them in your CSS
+    | using Tailwind's config helper. For example:
+    |
+    | .error { color: config('colors.red') }
+    */
+    --color-*: initial;
+
+    --color-transparent: transparent;
+
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    --color-grey-800: #0a0a0a;
+    --color-grey-400: #2D2D2D;
+    --color-grey-300: #303030;
+    --color-grey-200: #9E9E9E;
+    --color-grey-100: #f7f7f7;
+
+    --color-gold-dark: #b87c1d;
+    --color-gold-light: #eac666;
+}

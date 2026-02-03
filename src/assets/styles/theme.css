@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@import "./tw/theme/colors";
+@import "./tw/theme/screens";
+@import "./tw/theme/fonts";
+@import "./tw/theme/font-sizes";
+@import "./tw/theme/font-weights";

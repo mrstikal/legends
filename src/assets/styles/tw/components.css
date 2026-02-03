@@ -1,0 +1,25 @@
+@layer components {
+    .graham-bg {
+        @apply absolute -top-[100px] left-1/2 -translate-x-1/2 w-[610px] bg-grey-800/60;
+        @apply 2xl:w-[858px] 3xl:-top-[270px];
+    }
+
+    .grand-bg {
+        @apply absolute top-40 left-[calc(-1*(20px+3vw))] h-[11vw];
+    }
+
+    .grand-bg > svg, .hill-bg > svg {
+        height: 100%;
+        width: auto;
+        display: block;
+    }
+
+    .hill-bg {
+        @apply absolute top-40 left-[calc(90px+56vw)] h-[11vw] overflow-hidden;
+    }
+
+    .know-more {
+        @apply rounded-full font-medium text-base px-11 py-3 cursor-pointer;
+        @apply text-black bg-[linear-gradient(211deg,#b87c1d_0%,#eac666_45%,#eac666_100%)];
+    }
+}

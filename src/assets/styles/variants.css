@@ -1,0 +1,12 @@
+@custom-variant current (&:where(.current *));
+@custom-variant current-self (&:where(.current-self));
+@custom-variant collapsed (:where(.collapsed) &, &.collapsed);
+@custom-variant expanded (:where(.expanded) &, &.expanded);
+@custom-variant disabled (&:where(.disabled *));
+@custom-variant hover (&:hover);
+
+@custom-variant no-hover {
+    @media (hover: none) {
+        @slot;
+    }
+}

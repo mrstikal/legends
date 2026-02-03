@@ -1,0 +1,101 @@
+/*
+  Calculate fluid font sizes using the formula https://www.marcbacon.com/tools/clamp-calculator/
+
+  For more info about font size utility see https://tailwindcss.com/docs/font-size
+*/
+@theme {
+    /**
+      Please use following structure:
+        --font-size-{n}-min: {min} - min value, helper variable
+        --font-size-{n}-max: {max} - max value, helper variable
+        --font-size-{n}-formula: {formula} - formula to calculate mid value, helper
+        --font-size-{n}-value: {clamp} - final value, use this variable in your layouts
+        --line-height-{n}-min: {min} - min value, helper variable
+        --line-height-{n}-max: {max} - max value, helper variable
+        --line-height-{n}-formula: {formula} - formula to calculate mid value, helper
+        --line-height-{n}-value: {clamp} - final value, use this variable in your layouts
+
+        To be sure, add a comment before the formula for which viewport range it is created.
+
+        Remember that the minimum value, maximum value and range of viewports should be set
+        according to the graphical result and should not just be mechanically copied.
+    */
+    --font-size-sm-min: 0.8rem;
+    --font-size-sm-max: 0.875rem;
+    /* viewports range: 480 - 1920 px */
+    --font-size-sm-formula: 0.766rem + 0.114vw;
+    --font-size-sm-value: clamp(var(--font-size-sm-min), var(--font-size-sm-formula), var(--font-size-sm-max));
+    --line-height-sm-min: 1.15rem;
+    --line-height-sm-max: 1.25rem;
+    /* viewports range: 480 - 1920 px */
+    --line-height-sm-formula: 1.105rem + 0.152vw;
+    --line-height-sm-value: clamp(var(--line-height-sm-min), var(--line-height-sm-formula), var(--line-height-sm-max));
+
+    --font-size-base-min: 0.813rem;
+    --font-size-base-max: 0.938rem;
+    /* viewports range: 480 - 1920 px */
+    --font-size-base-formula: 0.771rem + 0.139vw;
+    --font-size-base-value: clamp(var(--font-size-base-min), var(--font-size-base-formula), var(--font-size-base-max));
+    --line-height-base-min: 1.2rem;
+    --line-height-base-max: 1.5rem;
+    /* viewports range: 480 - 1920 px */
+    --line-height-base-formula: 1.1rem + 0.333vw;
+    --line-height-base-value: clamp(var(--line-height-base-min), var(--line-height-base-formula), var(--line-height-base-max));
+
+    --font-size-lg-min: 0.85rem;
+    --font-size-lg-max: 1rem;
+    /* viewports range: 480 - 1920 px */
+    --font-size-lg-formula: 0.8rem + 0.167vw;
+    --font-size-lg-value: clamp(var(--font-size-lg-min), var(--font-size-lg-formula), var(--font-size-lg-max));
+    --line-height-lg-min: 1.2rem;
+    --line-height-lg-max: 1.4rem;
+    /* viewports range: 480 - 1920 px */
+    --line-height-lg-formula: 1.133rem + 0.222vw;
+    --line-height-lg-value: clamp(var(--line-height-lg-min), var(--line-height-lg-formula), var(--line-height-lg-max));
+
+    --font-size-xl-min: 1.2rem;
+    --font-size-xl-max: 1.5rem;
+    /* viewports range: 480 - 1920 px */
+    --font-size-xl-formula: 1.1rem + 0.333vw;
+    --font-size-xl-value: clamp(var(--font-size-xl-min), var(--font-size-xl-formula), var(--font-size-xl-max));
+    --line-height-xl-min: 1.5rem;
+    --line-height-xl-max: 1.9rem;
+    /* viewports range: 480 - 1920 px */
+    --line-height-xl-formula: 1.367rem + 0.444vw;
+    --line-height-xl-value: clamp(var(--line-height-xl-min), var(--line-height-xl-formula), var(--line-height-xl-max));
+
+
+    --font-size-2xl-min: 1.5rem;
+    --font-size-2xl-max: 2rem;
+    /* viewports range: 480 - 1920 px */
+    --font-size-2xl-formula: 1.387rem + 0.511vw;
+    --font-size-2xl-value: clamp(var(--font-size-2xl-min), var(--font-size-2xl-formula), var(--font-size-2xl-max));
+    --line-height-2xl-min: 2rem;
+    --line-height-2xl-max: 2.5rem;
+    /* viewports range: 480 - 1920 px */
+    --line-height-2xl-formula: 1.833rem + 0.556vw;
+    --line-height-2xl-value: clamp(var(--line-height-2xl-min), var(--line-height-2xl-formula), var(--line-height-2xl-max));
+
+    --font-size-3xl-min: 2.5rem;
+    --font-size-3xl-max: 3rem;
+    /* viewports range: 480 - 1920 px */
+    --font-size-3xl-formula: 2.167rem + 1.111vw;
+    --font-size-3xl-value: clamp(var(--font-size-3xl-min), var(--font-size-3xl-formula), var(--font-size-3xl-max));
+    --line-height-3xl-min: 3rem;
+    --line-height-3xl-max: 3.5rem;
+    /* viewports range: 480 - 1920 px */
+    --line-height-3xl-formula: 2.833rem + 0.556vw;
+    --line-height-3xl-value: clamp(var(--line-height-3xl-min), var(--line-height-3xl-formula), var(--line-height-3xl-max));
+
+    --font-size-4xl-min: 3.5rem;
+    --font-size-4xl-max: 4.25rem;
+    /* viewports range: 480 - 1920 px */
+    --font-size-4xl-formula: 3.25rem + 0.833vw;
+    --font-size-4xl-value: clamp(var(--font-size-4xl-min), var(--font-size-4xl-formula), var(--font-size-4xl-max));
+    --line-height-4xl-min: 4.25rem;
+    --line-height-4xl-max: 4.75rem;
+    /* viewports range: 480 - 1920 px */
+    --line-height-4xl-formula: 4.083rem + 0.556vw;
+    --line-height-4xl-value: clamp(var(--line-height-4xl-min), var(--line-height-4xl-formula), var(--line-height-4xl-max));
+
+}

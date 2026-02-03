@@ -1,0 +1,2 @@
+@source '../../src/**/*.{njk,html,md,liquid}';
+@source '../../assets/**/*.{js,ts}';
