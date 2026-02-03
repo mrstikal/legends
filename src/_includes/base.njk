@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <title>{{ title or "Vite + Eleventy" }}</title>
+
+    {{ viteTags("src/assets/main.js") | safe }}
+  </head>
+  <body class="font-inter text-base bg-grey-800 text-grey-100">
+    <main class="pl-[var(--padding-main-left-value)] pr-[var(--padding-main-right-value)] min-w-fit">
+      {{ content | safe }}
+    </main>
+  </body>
+</html>
