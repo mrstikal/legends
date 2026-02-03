@@ -1,0 +1,21 @@
+{
+  "name": "legends",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "cross-env ELEVENTY_ENV=development vite",
+    "build:vite": "vite build",
+    "build:11ty": "cross-env ELEVENTY_ENV=production eleventy",
+    "build": "pnpm run build:vite && pnpm run build:11ty",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@tailwindcss/vite": "^4.1.18",
+    "cross-env": "^10.1.0",
+    "nunjucks": "^3.2.4",
+    "tailwindcss": "^4.1.18",
+    "vite": "^7.2.4"
+  }
+}
